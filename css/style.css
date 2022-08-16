@@ -1,0 +1,58 @@
+/* flex variant:
+/* body {
+  margin: 0;
+}
+.gallery__item:nth-child(odd) {
+  background: goldenrod;
+  background-image: url(https://sweetpanda.ru/wp-content/uploads/2016/11/kakie-zvuki-izdaet-panda-slushat-golos-pandy-sweetpanda.ru_.ru_.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.gallery__item {
+  width: calc(100% / 3);
+  aspect-ratio: 1;
+  background-color: brown;
+  background-image: url(https://www.rappler.com/tachyon/2021/12/seasonal-depression-december-23-2021.jpg?resize=1280%2C720&zoom=1);
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  margin: 0;
+ 
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  
+} */
+
+/* grid variant*/
+body {
+  margin: 1rem;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, calc(100vw) / 3);
+  grid-gap: 0.5rem;
+}
+.gallery__item {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  filter: blur(0.5px) grayscale(1) brightness(40%);
+  transition: all 0.7s ease-in-out;
+}
+
+.gallery__item img:hover {
+  filter: none;
+  transform: scale(1.1);
+
+  /* transition: all 0.7s ease-in-out; */
+}
