@@ -42,9 +42,12 @@ body {
 }
 .gallery {
   display: grid;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.774);
+
   grid-template-columns: repeat(3, 1fr);
   /* grid-template-rows: repeat(8, calc(80vw) / 3); */
-  grid-gap: 0.5rem;
+  /* grid-gap: 0; */
 }
 .gallery__item {
   overflow: hidden;
