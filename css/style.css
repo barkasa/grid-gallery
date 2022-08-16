@@ -28,31 +28,38 @@
 
 /* grid variant*/
 body {
-  margin: 1rem;
+  width: 80vw;
+
+  box-sizing: border-box;
+  background: rgb(209, 210, 210);
+  background: radial-gradient(
+    circle,
+    rgba(209, 210, 210, 0.6362920168067228) 0%,
+    rgba(91, 96, 101, 1) 100%
+  );
+  justify-content: center;
+  margin-left: 10vw;
 }
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(9, calc(100vw) / 3);
+  /* grid-template-rows: repeat(8, calc(80vw) / 3); */
   grid-gap: 0.5rem;
 }
 .gallery__item {
-  border-radius: 10px;
   overflow: hidden;
 }
 .gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-
-  filter: blur(0.5px) grayscale(1) brightness(40%);
-  transition: all 0.7s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.gallery__item img:hover {
-  filter: none;
-  transform: scale(1.1);
-
-  /* transition: all 0.7s ease-in-out; */
+.gallery:hover img {
+  filter: blur(0.5px) grayscale(1) brightness(40%);
+}
+.gallery img:hover {
+  filter: unset;
+  transform: scale(1.2);
 }
